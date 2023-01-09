@@ -5,7 +5,9 @@ import vue from '@vitejs/plugin-vue'
 
 // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
 import vuetify from 'vite-plugin-vuetify'
-
+module.exports = {
+  publicPath: process.env.NODE_ENV === "production" ? "owpfcalculator" : "/",
+};
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
